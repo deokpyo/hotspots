@@ -6,13 +6,25 @@ var DealSchema = new mongoose.Schema({
         trim: true,
         required: true,
     },
+    deal: {
+        type: String,
+        trim: true,
+        required: true,
+    },
     location: {
         type: String,
-        default: ''
+        default: '',
+        required: true
     },
     rating: {
         type: String,
-        default: ''
+        default: '',
+        required: true,
+    },
+    image: {
+        type: String,
+        default: '',
+        required: true,
     }
 })
 
