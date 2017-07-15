@@ -1,7 +1,7 @@
-var DealController = require('./DealController')
+var SpotController = require('./SpotController')
 var ProfileController = require('./ProfileController')
 
 module.exports = {
-    deal: DealController,
+    spots: SpotController,
     profile: ProfileController
 }
