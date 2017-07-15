@@ -12,7 +12,7 @@ var mongoose = require('mongoose');
 var mongo_URI = process.env.MONGODB_URI;
 var dbUrl = 'mongodb://localhost/hotspots';
 
-mongoose.connect(dbUrl, {
+mongoose.connect(mongo_URI || dbUrl, {
   useMongoClient: true}, function(err, res){
   if (err) {
     console.log('DB CONNECTION FAILED: ' + err);
