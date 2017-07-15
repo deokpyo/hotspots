@@ -2,24 +2,42 @@ var webpack = require('webpack')
 var path = require('path')
 
 module.exports = {
-    entry: {
-        app: './src/app.js'
-    },
+    context: __dirname,
+    entry: { app: './src/main.jsx' },
     output: {
-        filename: 'public/dist/bundle.js',
-        sourceMapFilename: 'public/dist/bundle.map'
+      path: path.join(__dirname, 'public', 'dist'),
+      filename: "bundle.js",
+      devtoolModuleFilenameTemplate: '[resourcePath]',
+      devtoolFallbackModuleFilenameTemplate: '[resourcePath]?[hash]'
     },
-    devtool: '#source-map',
+    devtool: 'source-map',
     module: {
-        loaders: [
-            {
-                loader: 'babel-loader',
-                test: /\.jsx?$/,
-                exclude: /(node_modules)/,
-                query: {
-                    presets: ['react', 'es2015']
-                }
+      loaders: [
+        {
+          loader: 'babel-loader',
+          test: /\.jsx?$/,
+          exclude: /(node_modules)/,
+          query: {
+            presets: ['react', 'es2015']
+          }
+        },
+        {
+          test: /\.scss$/,
+          exclude: /node_modules/,
+          use: [
+            { loader: 'style-loader' },
+            { loader: 'css-loader', options: { sourceMap: true }},
+            { loader: 'sass-loader',
+              options: {
+                sourceMap: true,
+                includePaths: [path.resolve(__dirname, 'assets', 'stylesheet')]
+              }
             }
-        ]
-    }
+          ]
+        }
+      ]
+  },
+  resolve: {
+    extensions: [".js", ".jsx", "*" ]
+  }
 }
