@@ -70,7 +70,7 @@ class SessionForm extends React.Component {
         isOpen={this.props.open}
         onRequestClose={() => this.props.closeModal()}
         contentLabel="Modal"
-        className={`react-modal center-block animated fadeInUpBig`}
+        id='sessionForm'
         overlayClassName='react-modal-overlay'
       >
         <div className="admin-auth">
