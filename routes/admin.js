@@ -5,7 +5,7 @@ var bcrypt = require('bcryptjs')
 var utils = require('../utils')
 
 router.get('/:action', function(req, res, next){
-    var action = req.params.action
+    var action = req.params.action;
 
     if(action == 'currentuser'){ // check for a current user
         if(req.session == null) {
