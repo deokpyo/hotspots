@@ -72,7 +72,7 @@ blockquote {
   position: relative;
   padding-top: 85px;
   padding-bottom: 0px;
-  background-image: url('../images/lionel-gustave-171876.jpg');
+  background-image: url('https://res.cloudinary.com/hotpocket/image/upload/c_scale,w_1392/v1500151216/lionel-gustave-171876_oxnx5n.jpg');
   background-position: 50% 215%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -85,7 +85,7 @@ blockquote {
 
 .hero-section.home-page-hero {
   padding-bottom: 500px;
-  background-image: url('../images/discover.jpg');
+  background-image: url('https://res.cloudinary.com/hotpocket/image/upload/c_scale,w_1440/v1500169099/discover_graphic_u4qrzd.png');
   background-position: 50% -119px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -207,7 +207,7 @@ blockquote {
   right: 0px;
   bottom: 0px;
   height: 100%;
-  background-image: url('../images/yoal-desurmont-28740.jpg');
+  background-image: url('https://res.cloudinary.com/hotpocket/image/upload/c_scale,w_932/v1500151216/yoal-desurmont-28740_oq5ybb.jpg');
   background-position: 50% 50%;
   background-size: cover;
   -webkit-transition: -webkit-transform 1000ms ease;
@@ -223,19 +223,19 @@ blockquote {
 }
 
 .tile-image.seeall {
-  background-image: url('../images/mantas-hesthaven-135478.jpg');
+  background-image: url('https://res.cloudinary.com/hotpocket/image/upload/c_scale,w_914/v1500151216/mantas-hesthaven-135478_kzrhjl.jpg');
 }
 
 .tile-image.latest {
-  background-image: url('../images/jakob-owens-224352.jpg');
+  background-image: url('https://res.cloudinary.com/hotpocket/image/upload/c_scale,w_796/v1500151216/jakob-owens-224352_neq3gu.jpg');
 }
 
 .tile-image.trending {
-  background-image: url('../images/nathan-mcbride-229640.jpg');
+  background-image: url('https://res.cloudinary.com/hotpocket/image/upload/c_scale,w_845/v1500151216/nathan-mcbride-229640_knt6kg.jpg');
 }
 
-.tile-image.fresh-finds {
-  background-image: url('../images/phone.jpg');
+.tile-image.phone {
+  background-image: url('https://res.cloudinary.com/hotpocket/image/upload/c_scale,w_698/v1500151216/phone_g5ntjl.jpg');
   background-position: 39% 50%;
 }
 
@@ -442,7 +442,7 @@ blockquote {
 .project-image {
   height: 250px;
   border-radius: 3px;
-  background-image: url('../images/example-bg.png');
+  // background-image: url('../images/example-bg.png');
   background-position: 50% 50%;
   background-size: cover;
   -webkit-transition: -webkit-transform 700ms ease;
@@ -517,7 +517,7 @@ blockquote {
 .alternate-image {
   height: 360px;
   margin-bottom: 15px;
-  background-image: url('../images/example-bg.png');
+  // background-image: url('../images/example-bg.png');
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -542,7 +542,7 @@ blockquote {
   position: relative;
   height: 100%;
   margin-bottom: 10px;
-  background-image: url('../images/example-bg.png');
+  // background-image: url('../images/example-bg.png');
   background-position: 50% 50%;
   background-size: cover;
 }

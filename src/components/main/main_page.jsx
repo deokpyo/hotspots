@@ -8,6 +8,7 @@ import MainHeroTile from './main_hero_tile';
 class MainPage extends React.Component {
   constructor(props) {
     super(props);
+
   }
 
   render () {
