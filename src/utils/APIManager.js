@@ -12,7 +12,7 @@ export default {
                 return
             }
             //console.log(JSON.stringify(response.body))
-            const confirm = response.body.confirmation
+            const confirm = response.body.confirm
             if(confirm != 'success'){
                 callback({message: response.body.message}, null)
                 return

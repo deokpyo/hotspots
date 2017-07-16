@@ -7,22 +7,33 @@ import { APIManager } from '../../utils';
 class LandingPage extends React.Component {
   constructor(props) {
     super(props);
+
+    this.redirectIfLoggedIn = this.redirectIfLoggedIn.bind(this);
   }
+
   componentDidMount() {
-        // check current user
-        APIManager.get('/admin/currentuser', null, (err, response) => {
-            if (err) {
-                console.log('error ' + err);
-                return
-            }
-            if (response.profile == null) {
-                console.log('user not logged in');
-                return
-            }
-            // user is logged in
-            console.log('current user: ' + JSON.stringify(response))
-        })
+    // check current user
+    APIManager.get('/admin/currentuser', null, (err, response) => {
+      if (err) {
+        console.log('error ' + err);
+        return
+      }
+      if (response.profile == null) {
+        console.log('user not logged in');
+        return
+      }
+      // user is logged in
+      console.log('current user: ' + JSON.stringify(response))
+      this.redirectIfLoggedIn()
+    })
+  }
+
+  redirectIfLoggedIn() {
+    let location = this.props.history.location;
+    if (location.pathname === '/') {
+      this.props.history.push('/main');
     }
+  }
 
   render() {
     return (
