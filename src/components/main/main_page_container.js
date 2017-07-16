@@ -6,6 +6,7 @@ const mapStateToProps = ({session}) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
+
 });
 
 export default connect(

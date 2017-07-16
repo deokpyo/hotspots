@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MainHeroTile = ({ image='' }) => {
+const MainHeroTile = ({ image='', tag='hot', name, bed, location, desc, deal, price }) => {
   return (
     <div className="w-clearfix w-col w-col-6 w-dyn-item">
       <div className="_50 _60block" data-ix="tile-1">

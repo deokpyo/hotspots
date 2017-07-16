@@ -8,7 +8,6 @@ import MainHeroTile from './main_hero_tile';
 class MainPage extends React.Component {
   constructor(props) {
     super(props);
-
   }
 
   render () {
@@ -45,7 +44,8 @@ class MainPage extends React.Component {
             <div className="div-block-3">
               <div className="w-dyn-list">
                 <div className="collection-list w-dyn-items w-row">
-                  <MainHeroTile image='trending'/>
+                  <MainHeroTile
+                    image='trending'/>
                   <MainHeroTile image='seeall'/>
                 </div>
               </div>
