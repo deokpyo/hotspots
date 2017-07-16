@@ -32,19 +32,20 @@ class SessionButton extends React.Component {
       );
     } else {
       return (
-        <div className="contact nav-link w-nav-link">
-          <a
+        <a
+          onClick={() => this.toggleModal("login")}
+          className="contact nav-link w-nav-link">
+          <div
             className="nav-button"
             data-toggle='modal'
             data-target='#sessionForm'
-            onClick={() => this.toggleModal("login")}
             >
             Sign In
-          </a>
+          </div>
           <SessionFormContainer
             closeModal={() => this.toggleModal()}
             settings={this.state}/>
-        </div>
+        </a>
       );
     }
   }

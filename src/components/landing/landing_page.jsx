@@ -30,6 +30,10 @@ class LandingPage extends React.Component {
     })
   }
 
+  componentWillUpdate() {
+    this.redirectIfLoggedIn();
+  }
+
   redirectIfLoggedIn() {
     let location = this.props.history.location;
     if (location.pathname === '/') {

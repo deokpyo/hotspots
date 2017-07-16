@@ -13,7 +13,7 @@ const Root = ({store}) => {
 
   return (
     <Provider store={store}>
-      <Router>
+      <Router history={history}>
         <Home/>
       </Router>
     </Provider>

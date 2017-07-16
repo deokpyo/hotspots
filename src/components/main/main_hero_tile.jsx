@@ -7,7 +7,7 @@ const MainHeroTile = ({ image='', tag='hot', name, bed, location, desc, deal, pr
         <a className="hero-tile special w-inline-block">
           <div className={`main-tile-image ${image}`}>
             <div className="tile-overlay">
-              <div className="project-tag">{tag}</div>
+              <div className={`project-tag ${tag}`}>{tag}</div>
               <div className="spot-name tile-text">{name}</div>
               <div className="details">
                 <div className="bed">{`${bed} beds`}</div>

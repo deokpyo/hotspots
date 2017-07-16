@@ -17,6 +17,7 @@ class MainPage extends React.Component {
   }
 
   componentDidMount() {
+    debugger;
   }
 
   mapMainHeroTiles() {
@@ -47,6 +48,12 @@ class MainPage extends React.Component {
     return chosenObj;
   }
 
+  handleClick(e) {
+    e.preventDefault();
+    // this.setState({ !loggedIn });
+    this.props.logout();
+  }
+
   render () {
     return(
       <div>
@@ -57,18 +64,13 @@ class MainPage extends React.Component {
                 <a className="w-nav-brand" href="/">
                   <div className="logo-text"><span data-new-link="true">HOT</span><strong data-new-link="true">SPOTS</strong></div>
                 </a>
-                <nav className="nav-menu w-nav-menu" role="navigation"><a className="nav-link w-nav-link" href="/main">SEARCH</a><a className="contact nav-link w-nav-link" data-ix="show-contact-overlay">SIGN IN</a></nav>
-                <div className="menu-button w-nav-button">
-                  <div className="w-icon-nav-menu"></div>
-                </div>
-              </div>
-            </div>
-            <div className="nav w-nav" data-animation="default" data-collapse="medium" data-duration="400">
-              <div className="w-container">
-                <a className="w-nav-brand" href="/">
-                  <div className="logo-text"><span data-new-link="true">HOT</span><strong data-new-link="true">SPOTS</strong></div>
-                </a>
-                <nav className="nav-menu w-nav-menu" role="navigation"><a className="nav-link w-nav-link">SEARCH</a><a className="contact nav-link w-nav-link" data-ix="show-contact-overlay" >SIGN IN</a></nav>
+                <nav className="nav-menu w-nav-menu" role="navigation">
+                  <a className="nav-link w-nav-link" href="/main">SEARCH</a>
+                  <a
+                    className="contact nav-link w-nav-link"
+                    data-ix="show-contact-overlay"
+                    onClick={e => this.handleClick(e)}>LOG OUT</a>
+                </nav>
                 <div className="menu-button w-nav-button">
                   <div className="w-icon-nav-menu"></div>
                 </div>
