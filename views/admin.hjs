@@ -20,6 +20,14 @@
       <option value="Dallas, TX">Dallas, TX</option>
        <option value="Houston, TX">Houston, TX</option>
     </select>
+    <label>Rooms: </label>
+    <select name="rooms">
+      <option value="2 BR / 1 BA / Sleeps 4">2 BR / 1 BA</option>
+      <option value="3 BR / 2 BA / Sleeps 6">3 BR / 2 BA</option>
+      <option value="4 BR / 3 BA / Sleeps 8">4 BR / 3 BA</option>
+      <option value="5 BR / 4 BA / Sleeps 10">5 BR / 4 BA</option>
+      <option value="6 BR / 5 BA / Sleeps 12">6 BR / 5 BA</option>
+    </select>
     <label>Rating: </label>
     <select name="rating">
       <option value="1">1</option>
@@ -30,7 +38,7 @@
     </select>
     <br/><br/>
     <label>Image Link: </label>
-    <input type="text" name="deal" placeholder="Link" />
+    <input type="text" name="image" placeholder="Link" />
     <br/>
     <br/>
     <input style="font-size:40px; color:blue" type="submit" value="Create Data" />

@@ -21,6 +21,11 @@ var DealSchema = new mongoose.Schema({
         default: '',
         required: true,
     },
+    rooms: {
+        type: String,
+        default: '',
+        required: true,
+    },
     image: {
         type: String,
         default: '',
