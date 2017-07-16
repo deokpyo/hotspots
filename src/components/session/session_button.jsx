@@ -23,14 +23,12 @@ class SessionButton extends React.Component {
   render () {
     if (this.props.loggedIn) {
       return (
-        <div className={`session-button`}>
-          <a
-            className="logout"
-            onClick={() => this.logout()}
-            >
-            Log Out
-          </a>
-        </div>
+        <a
+          className="contact nav-link w-nav-link"
+          onClick={() => this.logout()}
+          >
+          Log Out
+        </a>
       );
     } else {
       return (

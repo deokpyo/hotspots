@@ -103,7 +103,6 @@ router.post('/login', function(req, res, next){
         var token = utils.JWT.sign({id:profile._id}, process.env.TOKEN_SECRET)
         req.session.token = token
         res.json(profile);
-
     })
     .catch(function(err){
         res.json({

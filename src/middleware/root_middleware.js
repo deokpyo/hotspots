@@ -1,6 +1,7 @@
 import { applyMiddleware } from 'redux';
 import { createLogger } from 'redux-logger';
 import SessionMiddleware from './session_middleware';
+import createHistory from 'history/createHashHistory';
 
 const logger = createLogger();
 
