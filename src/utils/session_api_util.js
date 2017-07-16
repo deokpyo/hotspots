@@ -1,11 +1,10 @@
 import $ from 'jquery';
 
 export const login = (user, success, error) => {
-  debugger;
   $.ajax({
     method: 'post',
     url: 'admin/login',
-    data: {user},
+    data: user,
     success,
     error
   });

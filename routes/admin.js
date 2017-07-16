@@ -77,11 +77,9 @@ router.post('/logout', function(req, res, next){
 // log in
 router.post('/login', function(req, res, next){
 
-    var credentials = req.body
-    console.log(credentials.user[username]);
-
+    var credentials = req.body;
     controllers.profile
-    .find({username: credentials.user.username}, true)
+    .find({username: credentials.username}, true)
     .then(function(profiles){
         if(profiles.length == 0){
             res.json({
@@ -104,7 +102,7 @@ router.post('/login', function(req, res, next){
         // create a signed token
         var token = utils.JWT.sign({id:profile._id}, process.env.TOKEN_SECRET)
         req.session.token = token
-        res.redirect('/admin')
+        res.json(profile);
 
     })
     .catch(function(err){
