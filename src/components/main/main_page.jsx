@@ -5,16 +5,8 @@ import { withRouter } from 'react-router';
 class MainPage extends React.Component {
   constructor(props) {
     super(props);
-
   }
 
-  componentDidMount() {
-    debugger;
-  }
-
-  componentWillUpdate() {
-    debugger;
-  }
   render () {
     return(
       <div>

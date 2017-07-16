@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 
 // custom components
+import Home from './layout/Home';
 import LandingPage from './landing/landing_page';
 import MainPageContainer from './main/main_page_container';
 
@@ -12,13 +13,8 @@ const Root = ({store}) => {
 
   return (
     <Provider store={store}>
-      <Router history={history}>
-        <div>
-          <Switch>
-            <Route path="/" component={LandingPage} />
-            <Route path='/main' component={MainPageContainer} />
-          </Switch>
-        </div>
+      <Router>
+        <Home/>
       </Router>
     </Provider>
   )
