@@ -12,14 +12,6 @@ class LandingPage extends React.Component {
     debugger;
   }
 
-  componentWillUpdate() {
-    debugger;
-  }
-
-  componentWillReceiveProps() {
-    debugger;
-  }
-
   render() {
     return (
       <div>

@@ -24,7 +24,7 @@ export const SessionReducer = (state = _defaultState, action) => {
       let username = action.currentUser.username;
       return merge(newState, { currentUser: {username}, errors: [] });
     case RECEIVE_ERRORS:
-      return merge(newState, { currentUser: {}, errors: action.errors });
+      return merge(newState, { errors: action.errors });
     case LOGOUT:
       return merge({}, _defaultState);
     case TOGGLE_MODAL:

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { login, logout, toggleModal } from '../../actions/session_actions';
+import { login, logout, toggleModal, signup } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
 const mapStateToProps = ({ session }) => ({
@@ -10,6 +10,7 @@ const mapStateToProps = ({ session }) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   login: user => dispatch(login(user)),
+  signup: user => dispatch(signup(user)),
   closeModal: () => dispatch(toggleModal())
 });
 

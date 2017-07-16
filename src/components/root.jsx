@@ -15,8 +15,8 @@ const Root = ({store}) => {
       <Router history={history}>
         <div>
           <Switch>
-            <Route path="/" component={LandingPage} />
-            <Route path='/main' component={MainPageContainer} />
+            <Route exact path="/" component={LandingPage} />
+            <Route path='main' component={MainPageContainer} />
           </Switch>
         </div>
       </Router>

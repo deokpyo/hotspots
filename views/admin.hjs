@@ -7,7 +7,7 @@
 
 <body>
   <h1>Admin Data Page</h1>
-  <form action="/api/deal" method="post">
+  <form action="/api/spots" method="post">
     <label>Price: </label>
     <input type="text" name="price" placeholder="Price" />
     <label>Discounted Price: </label>
@@ -18,7 +18,7 @@
     <select name="location">
       <option value="Austin, TX">Austin, TX</option>
       <option value="Dallas, TX">Dallas, TX</option>
-       <option value="Houston, TX">Houston, TX</option>
+      <option value="Houston, TX">Houston, TX</option>
     </select>
     <label>Rooms: </label>
     <select name="rooms">
