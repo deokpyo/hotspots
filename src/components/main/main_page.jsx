@@ -8,6 +8,43 @@ import MainHeroTile from './main_hero_tile';
 class MainPage extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      spots: [],
+      left: {},
+      right: {}
+    }
+  }
+
+  componentDidMount() {
+  }
+
+  mapMainHeroTiles() {
+    return this.state.map(tile => {
+      let assets = {
+        image: tile.image,
+        tag: tile.tag,
+        name: tile.name,
+        bed: tile.bed,
+        location: tile.location,
+        desc: tile.description,
+        deal: tile.deal,
+        price: tile.price
+      };
+
+      return <MainHeroTile assets={assets}/>
+    });
+  }
+
+  renderCandidates(array) {
+
+  }
+
+  randomSpots(list) {
+    let randomNum = Math.floor(Math.random() * list.length);
+    let chosenObj = list[randomNum];
+    this.setState({spots: list.splice(randomNum, 1)});
+    return chosenObj;
   }
 
   render () {
@@ -17,10 +54,10 @@ class MainPage extends React.Component {
           <div className="hero-overlay">
             <div className="nav w-nav" data-animation="default" data-collapse="medium" data-duration="400">
               <div className="w-container">
-                <a className="w-nav-brand" href="index.html">
+                <a className="w-nav-brand" href="/">
                   <div className="logo-text"><span data-new-link="true">HOT</span><strong data-new-link="true">SPOTS</strong></div>
                 </a>
-                <nav className="nav-menu w-nav-menu" role="navigation"><a className="nav-link w-nav-link" href="/blog">SEARCH</a><a className="contact nav-link w-nav-link" data-ix="show-contact-overlay" href="#">SIGN IN</a></nav>
+                <nav className="nav-menu w-nav-menu" role="navigation"><a className="nav-link w-nav-link" href="/main">SEARCH</a><a className="contact nav-link w-nav-link" data-ix="show-contact-overlay">SIGN IN</a></nav>
                 <div className="menu-button w-nav-button">
                   <div className="w-icon-nav-menu"></div>
                 </div>
@@ -28,10 +65,10 @@ class MainPage extends React.Component {
             </div>
             <div className="nav w-nav" data-animation="default" data-collapse="medium" data-duration="400">
               <div className="w-container">
-                <a className="w-nav-brand" href="index.html">
+                <a className="w-nav-brand" href="/">
                   <div className="logo-text"><span data-new-link="true">HOT</span><strong data-new-link="true">SPOTS</strong></div>
                 </a>
-                <nav className="nav-menu w-nav-menu" role="navigation"><a className="nav-link w-nav-link" href="/blog">SEARCH</a><a className="contact nav-link w-nav-link" data-ix="show-contact-overlay" href="#">SIGN IN</a></nav>
+                <nav className="nav-menu w-nav-menu" role="navigation"><a className="nav-link w-nav-link">SEARCH</a><a className="contact nav-link w-nav-link" data-ix="show-contact-overlay" >SIGN IN</a></nav>
                 <div className="menu-button w-nav-button">
                   <div className="w-icon-nav-menu"></div>
                 </div>
@@ -45,8 +82,23 @@ class MainPage extends React.Component {
               <div className="w-dyn-list">
                 <div className="collection-list w-dyn-items w-row">
                   <MainHeroTile
-                    image='trending'/>
-                  <MainHeroTile image='seeall'/>
+                    image='shell'
+                    tag='New'
+                    name='shell house vacation'
+                    bed='6'
+                    location='San Francisco, CA'
+                    desc='5'
+                    deal='108'
+                    price='200'/>
+                  <MainHeroTile
+                    image='urban'
+                    tag='Featured'
+                    name='urban getaway in downtown'
+                    bed='4'
+                    location='Austin, TX'
+                    desc='4'
+                    deal='75'
+                    price='30'/>
                 </div>
               </div>
             </div>

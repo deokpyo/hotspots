@@ -9,7 +9,7 @@ router.get('/:resource', function (req, res, next) {
 
     if (controller == null) {
         res.json({
-            confirmation: 'fail',
+            confirm: 'fail',
             message: 'Invalid Resource Request: ' + resource
         })
         return
@@ -18,13 +18,13 @@ router.get('/:resource', function (req, res, next) {
     controller.find(req.query, function (err, results) {
         if (err) {
             res.json({
-                confirmation: 'fail',
+                confirm: 'fail',
                 message: err
             })
             return
         }
         res.json({
-            confirmation: 'success',
+            confirm: 'success',
             results: results
         })
     })
@@ -38,7 +38,7 @@ router.get('/:resource/:id', function (req, res, next) {
 
     if (controller == null) {
         res.json({
-            confirmation: 'fail',
+            confirm: 'fail',
             message: 'Invalid Resource Request: ' + resource
         })
         return
@@ -47,13 +47,13 @@ router.get('/:resource/:id', function (req, res, next) {
     controller.findById(id, function (err, results) {
         if (err) {
             res.json({
-                confirmation: 'fail',
+                confirm: 'fail',
                 message: 'Not Found'
             })
             return
         }
         res.json({
-            confirmation: 'success',
+            confirm: 'success',
             results: results
         })
     })
@@ -67,7 +67,7 @@ router.delete('/:resource/:id', function (req, res, next) {
 
     if (controller == null) {
         res.json({
-            confirmation: 'fail',
+            confirm: 'fail',
             message: 'Invalid Resource Request: ' + resource
         })
         return
@@ -76,13 +76,13 @@ router.delete('/:resource/:id', function (req, res, next) {
     controller.delete(id, function (err, results) {
         if (err) {
             res.json({
-                confirmation: 'fail',
+                confirm: 'fail',
                 message: 'id not found: ' + id
             })
             return
         }
         res.json({
-            confirmation: 'success',
+            confirm: 'success',
             results: results
         })
     })
@@ -97,7 +97,7 @@ router.put('/:resource/:id', function (req, res, next) {
 
     if (controller == null) {
         res.json({
-            confirmation: 'fail',
+            confirm: 'fail',
             message: 'Invalid Resource Request: ' + resource
         })
         return
@@ -106,13 +106,13 @@ router.put('/:resource/:id', function (req, res, next) {
     controller.update(id, req.body, function (err, results) {
         if (err) {
             res.json({
-                confirmation: 'fail',
+                confirm: 'fail',
                 message: 'Not Found'
             })
             return
         }
         res.json({
-            confirmation: 'success',
+            confirm: 'success',
             results: results
         })
     })
@@ -126,7 +126,7 @@ router.post('/:resource', function (req, res, next) {
 
     if (controller == null) {
         res.json({
-            confirmation: 'fail',
+            confirm: 'fail',
             message: 'Invalid Resource Request: ' + resource
         })
         return
@@ -135,13 +135,13 @@ router.post('/:resource', function (req, res, next) {
     controller.create(req.body, function (err, results) {
         if (err) {
             res.json({
-                confirmation: 'fail',
+                confirm: 'fail',
                 message: err
             })
             return
         }
         res.json({
-            confirmation: 'success',
+            confirm: 'success',
             results: results
         })
     })
