@@ -11,6 +11,12 @@ class SessionButton extends React.Component {
     };
   }
 
+  componentWillReceiveProps(newProps) {
+    if (newProps.loggedIn) {
+      
+    }
+  }
+
   toggleModal (action) {
     this.props.toggleModal();
     this.setState({ action });
@@ -43,7 +49,7 @@ class SessionButton extends React.Component {
             Sign In
           </div>
           <SessionFormContainer
-            closeModal={() => this.toggleModal()}
+            closeModal={() => this.toggleModal("logout")}
             settings={this.state}/>
         </a>
       );

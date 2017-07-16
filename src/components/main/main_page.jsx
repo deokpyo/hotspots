@@ -16,10 +16,6 @@ class MainPage extends React.Component {
     }
   }
 
-  componentDidMount() {
-    debugger;
-  }
-
   mapMainHeroTiles() {
     return this.state.map(tile => {
       let assets = {
@@ -84,7 +80,7 @@ class MainPage extends React.Component {
               <div className="w-dyn-list">
                 <div className="collection-list w-dyn-items w-row">
                   <MainHeroTile
-                    image='shell'
+                    image='urban'
                     tag='New'
                     name='shell house vacation'
                     bed='6'
@@ -93,7 +89,7 @@ class MainPage extends React.Component {
                     deal='108'
                     price='200'/>
                   <MainHeroTile
-                    image='urban'
+                    image='shell'
                     tag='Featured'
                     name='urban getaway in downtown'
                     bed='4'
