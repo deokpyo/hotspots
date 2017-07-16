@@ -7,19 +7,19 @@ import configureStore from './store/store';
 require('../assets/stylesheet/application.scss');
 
 document.addEventListener("DOMContentLoaded", ()=> {
-	let store;
-  if (window.currentUser) {
-    const preloadedState = {
-      session: {
-        currentUser: window.currentUser,
-        errors: []
-      }
-    };
-    store = configureStore(preloadedState);
-  } else {
-    store = configureStore();
-  }
+  // if (window.currentUser) {
+  //   const preloadedState = {
+  //     session: {
+  //       currentUser: window.currentUser,
+  //       errors: []
+  //     }
+  //   };
+  //   store = configureStore(preloadedState);
+  // } else {
+	//	 store = configureStore();
+  // }
 
+	let store = configureStore();
   window.store = store;
 	const root = document.querySelector('#root');
 	ReactDOM.render(<Root store={store}/>, root);

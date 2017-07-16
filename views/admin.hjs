@@ -18,7 +18,7 @@
     <select name="location">
       <option value="Austin, TX">Austin, TX</option>
       <option value="Dallas, TX">Dallas, TX</option>
-       <option value="Houston, TX">Houston, TX</option>
+      <option value="Houston, TX">Houston, TX</option>
     </select>
     <label>Rooms: </label>
     <select name="rooms">

@@ -2,9 +2,10 @@ import {
   receiveCurrentUser,
   receiveErrors,
   LOGIN,
-  LOGOUT
+  LOGOUT,
+  SIGNUP
 } from '../actions/session_actions';
-import { login, logout } from '../utils/session_api_util';
+import { login, logout, signup } from '../utils/session_api_util';
 
 export default ({getState, dispatch}) => next => action => {
   const successCallback = user => dispatch(receiveCurrentUser(user));
@@ -18,6 +19,9 @@ export default ({getState, dispatch}) => next => action => {
       logout(() => {
         next(action);
       });
+      return next(action);
+    case SIGNUP:
+      signup(action.user, successCallback, errorCallback);
       return next(action);
     default:
       return next(action);

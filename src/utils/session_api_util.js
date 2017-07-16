@@ -20,3 +20,14 @@ export const logout = (success, error) => {
     }
   });
 };
+
+export const signup = (user, success, error) => {
+  $.ajax({
+    method: 'post',
+    url: 'admin/register',
+    success,
+    error: () => {
+      console.log('Sign Up error');
+    }
+  });
+}

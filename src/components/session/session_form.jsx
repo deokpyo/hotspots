@@ -23,6 +23,12 @@ class SessionForm extends React.Component {
     this.props.login(user);
   }
 
+  handleSignUp(e) {
+    e.preventDefault();
+    const user = this.state;
+    this.props.signup(user);
+  }
+
   redirectIfLoggedIn () {
     if (this.props.loggedIn) {
       this.props.router.push('/main');
@@ -129,6 +135,13 @@ class SessionForm extends React.Component {
             className="btn btn-primary"
             onClick={(e) => this.handleSubmit(e)}
             tabIndex="3">Submit</button>
+          <button
+            type='submit'
+            className='btn btn-warning'
+            onClick={e => this.handleSignUp(e)}
+            tabIndex='4'>
+            Sign Up
+          </button>
         </form>
       </Modal>
     )
