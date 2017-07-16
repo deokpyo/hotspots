@@ -8,6 +8,12 @@ router.get('/', function (req, res, next) {
   });
 });
 
+router.get('/main', function (req, res, next) {
+  res.render('index', {
+    title: 'Main Page'
+  });
+});
+
 /* GET admin page. */
 router.get('/admin', checkAuth, function (req, res, next) {
   res.render('admin', {
