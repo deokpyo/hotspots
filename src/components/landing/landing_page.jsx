@@ -1,8 +1,10 @@
 import React from 'react';
 import { withRouter } from 'react-router';
+import { APIManager } from '../../utils';
+
 import Navbar from '../shared/navbar';
 import HeroTile from './hero_tile';
-import { APIManager } from '../../utils';
+import Footer from '../shared/footer';
 
 class LandingPage extends React.Component {
   constructor(props) {
@@ -53,6 +55,7 @@ class LandingPage extends React.Component {
               </div>
             </div>
         </div>
+        <Footer />
       </div>
     )
   }
