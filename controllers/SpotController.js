@@ -1,67 +1,67 @@
-var Deal = require('../models/Deal');
+var Spot = require('../models/Spot');
 
 module.exports = {
     // get request
     find: function (params, callback) {
-        Deal.find(params, function (err, deals) {
+        Spot.find(params, function (err, spots) {
             if (err) {
                 callback(err, null)
                 return
             }
-            callback(null, deals)
+            callback(null, spots)
         })
     },
 
     findById: function (id, callback) {
-        Deal.findById(id, function (err, deal) {
+        Spot.findById(id, function (err, spot) {
             if (err) {
                 callback(err, null)
                 return
             }
-            callback(null, deal)
+            callback(null, spot)
         })
     },
 
     findOneAndUpdate: function(id, params, callback){
-        Deal.findOneAndUpdate({
+        Spot.findOneAndUpdate({
             "_id": id
         }, {
             $push: {
                 "user": params._id
             }
-        }, function(err, deal){
+        }, function(err, spot){
             if(err) {
                 callback(err, null)
                 return
             }
-            callback(null, deal)
+            callback(null, spot)
         })
     },
 
     // post request
     create: function (params, callback) {
-        Deal.create(params, function (err, deal) {
+        Spot.create(params, function (err, spot) {
             if (err) {
                 callback(err, null)
                 return
             }
-            callback(null, deal)
+            callback(null, spot)
         })
     },
 
     // put request
     update: function (id, params, callback) {
-        Deal.findByIdAndUpdate(id, params, {new:true}, function(err, employee){
+        Spot.findByIdAndUpdate(id, params, {new:true}, function(err, spot){
             if(err){
                 callback(err, null)
                 return
             }
-            callback(null, employee)
+            callback(null, spot)
         })
     },
 
     delete: function (id, callback) {
-        Deal.findByIdAndRemove(id, function(err){
+        Spot.findByIdAndRemove(id, function(err){
             if(err){
                 callback(err, null)
                 return

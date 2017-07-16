@@ -1,6 +1,6 @@
 var mongoose = require('mongoose')
 
-var DealSchema = new mongoose.Schema({
+var SpotSchema = new mongoose.Schema({
     price: {
         type: String,
         trim: true,
@@ -33,4 +33,4 @@ var DealSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('DealSchema', DealSchema)
+module.exports = mongoose.model('SpotSchema', SpotSchema)

@@ -9,10 +9,9 @@ require('dotenv').config();
 
 // mongoDB connection
 var mongoose = require('mongoose');
-var mongo_URI = process.env.MONGODB_URI;
-var dbUrl = 'mongodb://localhost/hotspots';
+var dbUrl = process.env.MONGODB_URI;
 
-mongoose.connect(mongo_URI || dbUrl, {
+mongoose.connect(dbUrl, {
   useMongoClient: true}, function(err, res){
   if (err) {
     console.log('DB CONNECTION FAILED: ' + err);
