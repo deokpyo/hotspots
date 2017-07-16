@@ -65,49 +65,71 @@ class SessionForm extends React.Component {
   }
 
   render () {
+    const customStyle = {
+      content: {
+        top: '50%',
+        right: 'auto',
+        left: '50%',
+        bottom: 'auto',
+        transform: 'translate(-50%, -50%)'
+      }
+    }
     return (
       <Modal
         isOpen={this.props.open}
         onRequestClose={() => this.props.closeModal()}
         contentLabel="Modal"
         id='sessionForm'
+        style={customStyle}
         overlayClassName='react-modal-overlay'
       >
-        <div className="admin-auth">
-          <div>
-            <h1>ADMIN LOG IN</h1>
+        <form>
+          <div className="form-group">
+            <label>ADMIN LOG IN</label>
           </div>
-          <div className="username-wrap">
+          <div className="form-group">
+            <label htmlFor="username">Username</label>
             <input
-              className="username"
-              placeholder="Username"
+              className="form-control"
+              id="username"
+              placeholder="Enter Username"
+              aria-describedby="usernameHelp"
               onChange={(e) => this.update(e, "username")}
               value={this.state.username}
               required
               tabIndex="1"
               autoFocus></input>
+            <small id="usernameHelp" className="form-text text-muted">
+              Will never share your information with anyone else
+            </small>
             <div className="username-error">
               {() => this.displayErrorMessages("username")}
             </div>
           </div>
-          <div className="password-wrap">
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
             <input
-              className="password"
-              placeholder="Password"
+              className="form-control"
+              id="password"
+              placeholder="Enter Password"
               onChange={e => this.update(e, "password")}
               value={this.state.password}
               type="password"
               required
               tabIndex="2"></input>
+            <small id="passwordHelp" className="form-text text-muted">
+              Password longer than 6 characters
+            </small>
             <div className="password-error">
               {() => this.displayErrorMessages("password")}
             </div>
           </div>
           <button
-            className="submit"
+            type="submit"
+            className="btn btn-primary"
             onClick={(e) => this.handleSubmit(e)}
             tabIndex="3">Submit</button>
-        </div>
+        </form>
       </Modal>
     )
 

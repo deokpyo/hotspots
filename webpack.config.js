@@ -26,10 +26,10 @@ module.exports = {
           exclude: /node_modules/,
           use: [
             { loader: 'style-loader' },
-            { loader: 'css-loader', options: { sourceMap: true }},
+            { loader: 'css-loader', options: { sourceMap: false }},
             { loader: 'sass-loader',
               options: {
-                sourceMap: true,
+                sourceMap: false,
                 includePaths: [path.resolve(__dirname, 'assets', 'stylesheet')]
               }
             }

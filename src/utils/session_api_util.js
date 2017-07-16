@@ -12,8 +12,8 @@ export const login = (user, success, error) => {
 
 export const logout = (success, error) => {
   $.ajax({
-    method: 'delete',
-    url: 'api/session',
+    method: 'post',
+    url: 'admin/logout',
     success,
     error: () => {
       console.log("Logout error in SessionApiUtil#logout");
