@@ -7,3 +7,14 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+.nav-button {
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 1;
+    color: #fff;
+    cursor: pointer;
+  }
+}

@@ -2,6 +2,7 @@ $bootstrap-sass-asset-helper: true;
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
 @import './base/fonts.scss';
+@import './base/global.scss';
 
 // @import "./webflow/normalize.scss";
 @import "./webflow/webflow.scss";

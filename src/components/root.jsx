@@ -1,10 +1,10 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { Router, Route } from 'react-router';
+import { Router, Route } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 
 // custom components
-import App from './app';
+import LandingPage from './landing/landing_page';
 
 const Root = ({store}) => {
   const history = createBrowserHistory();
@@ -12,7 +12,7 @@ const Root = ({store}) => {
   return (
     <Provider store={store}>
       <Router history={history}>
-        <Route path="/" component={App}></Route>
+        <Route exact path="/" component={LandingPage}/>
       </Router>
     </Provider>
   )

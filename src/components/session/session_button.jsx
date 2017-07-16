@@ -36,6 +36,7 @@ class SessionButton extends React.Component {
       return (
         <div className="contact nav-link w-nav-link">
           <a
+            className="nav-button"
             data-toggle='modal'
             data-target='#sessionForm'
             onClick={() => this.toggleModal("login")}
