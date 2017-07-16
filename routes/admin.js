@@ -78,9 +78,10 @@ router.post('/logout', function(req, res, next){
 router.post('/login', function(req, res, next){
 
     var credentials = req.body
+    console.log(credentials.user[username]);
 
     controllers.profile
-    .find({username: credentials.username}, true)
+    .find({username: credentials.user.username}, true)
     .then(function(profiles){
         if(profiles.length == 0){
             res.json({
