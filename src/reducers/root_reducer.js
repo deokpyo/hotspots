@@ -4,7 +4,7 @@ import SessionReducer from './session_reducer';
 import SpotReducer from './spot_reducer';
 
 export default combineReducers ({
-  router: routerReducer,
+  routing: routerReducer,
   spots: SpotReducer,
   session: SessionReducer
 });

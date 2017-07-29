@@ -13,7 +13,9 @@ class SessionButton extends React.Component {
 
   componentWillReceiveProps(newProps) {
     if (newProps.loggedIn) {
-      
+      if (newProps.location.pathname == '/') {
+        
+      }
     }
   }
 

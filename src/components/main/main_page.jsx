@@ -3,7 +3,7 @@ import { withRouter } from 'react-router';
 
 import Navbar from '../shared/navbar';
 import Footer from '../shared/footer';
-import MainHeroTile from './main_hero_tile';
+import HeroTile from './hero_tile';
 
 class MainPage extends React.Component {
   constructor(props) {
@@ -29,7 +29,7 @@ class MainPage extends React.Component {
         price: tile.price
       };
 
-      return <MainHeroTile assets={assets}/>
+      return <HeroTile assets={assets}/>
     });
   }
 
@@ -79,7 +79,7 @@ class MainPage extends React.Component {
             <div className="div-block-3">
               <div className="w-dyn-list">
                 <div className="collection-list w-dyn-items w-row">
-                  <MainHeroTile
+                  <HeroTile
                     image='urban'
                     tag='New'
                     name='shell house vacation'
@@ -88,7 +88,7 @@ class MainPage extends React.Component {
                     desc='5'
                     deal='108'
                     price='200'/>
-                  <MainHeroTile
+                  <HeroTile
                     image='shell'
                     tag='Featured'
                     name='urban getaway in downtown'

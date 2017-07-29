@@ -135,6 +135,7 @@ class SessionForm extends React.Component {
             className="btn btn-primary"
             onClick={(e) => this.handleSubmit(e)}
             tabIndex="3">Submit</button>
+          <hr/>
           <button
             type='submit'
             className='btn btn-warning'
